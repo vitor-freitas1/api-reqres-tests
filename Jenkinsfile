@@ -9,6 +9,10 @@ pipeline {
         maven 'Maven-3.9.10' 
     }
 
+    triggers {
+        githubPush()
+    }
+
     stages {
         // Estágio 1: Baixar o Código do GitHub
         stage('Checkout') {
